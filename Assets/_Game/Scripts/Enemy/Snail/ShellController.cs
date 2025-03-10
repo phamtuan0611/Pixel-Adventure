@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,11 +11,6 @@ public class ShellController : MonoBehaviour
     protected Rigidbody2D theRB;
     [SerializeField] private float hitSpeed;
 
-    //public void OnEnable()
-    //
-    //.SetParent(null);
-    //theRB = GetComponent<Rigidbody2D>();
-    //}
     void Awake()
     {
         theRB = GetComponent<Rigidbody2D>();
@@ -23,8 +18,7 @@ public class ShellController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //theRB = GetComponent<Rigidbody2D>();
-        theRB.velocity = new Vector2(-5, 2);
+        theRB.velocity = new Vector2(5, 3);
     }
 
     // Update is called once per frame
@@ -44,26 +38,17 @@ public class ShellController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ground"))
         {
-            Debug.Log("wall hit");
-            //anim.SetTrigger("wallHit");
-            //FindFirstObjectByType<PlayerController>().Jump();
+            //Debug.Log("wall hit");
 
-            //isDefeated = true;
+            // Kiểm tra va chạm với tường bằng Raycast
+            bool hitLeft = Physics2D.Raycast(transform.position, Vector2.left, 0.5f, LayerMask.GetMask("Ground"));
+            bool hitRight = Physics2D.Raycast(transform.position, Vector2.right, 0.5f, LayerMask.GetMask("Ground"));
 
-            foreach (ContactPoint2D contactPoint in other.contacts)
+            if (hitLeft || hitRight)
             {
-                Debug.Log("Touch ground"); Vector2 normal = contactPoint.normal;
-                Debug.Log($"Va ch?m v?i: {other.gameObject.name}, Normal: {normal}");
-
-
-                if (Mathf.Abs(normal.x) > 0.5f && normal.y > -0.1f && normal.y < 0.1f)
-                {
-                    //theRB.velocity = new Vector2(hitSpeed, transform.position.y);
-
-                    Debug.Log("Hit Ground");
-                    anim.SetTrigger("wallHit");
-                    isDefeated = true;
-                }
+                //Debug.Log("Hit Side Wall");
+                anim.SetTrigger("wallHit");
+                isDefeated = true;
             }
         }
     }
@@ -71,7 +56,7 @@ public class ShellController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Top hit");
+            //Debug.Log("Top hit");
             anim.SetTrigger("topHit");
 
             FindFirstObjectByType<PlayerController>().Jump();

@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class SnailNShell : ShellController
 {
-    //[SerializeField] private Rigidbody2D theRB;
-
-    
-
     // Start is called before the first frame update
     void Start()
     {
         theRB = GetComponent<Rigidbody2D>();
-        theRB.velocity = new Vector2(5, 2);
+        theRB.velocity = new Vector2(-5, 3);
     }
 
     // Update is called once per frame
