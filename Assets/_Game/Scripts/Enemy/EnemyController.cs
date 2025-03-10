@@ -29,8 +29,8 @@ public class EnemyController : EnemyMoving
             if (waitToDestroy <= 0)
             {
                 Destroy(gameObject);
-                Destroy(patrolPoints[0]);
-                Destroy(patrolPoints[1]);
+                Destroy(patrolPoints[0].gameObject);
+                Destroy(patrolPoints[1].gameObject);
             }
         }
     }
@@ -50,7 +50,7 @@ public class EnemyController : EnemyMoving
     {
         if (other.CompareTag("Player"))
         {
-            //FindFirstObjectByType<PlayerController>().Jump();
+            FindFirstObjectByType<PlayerController>().Jump();
 
             anim.SetTrigger("isHitting");
 
