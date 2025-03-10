@@ -30,8 +30,10 @@ public class SnailController : MonoBehaviour
         {
             //snail = gameObject.transform;
             shellShall.SetActive(true);
+            shellShall.transform.SetParent(null);
 
             snailNShell.SetActive(true);
+            snailNShell.transform.SetParent(null);
 
             isTouch = true;
         }

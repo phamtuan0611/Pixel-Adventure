@@ -11,7 +11,8 @@ public class SnailNShell : ShellController
     // Start is called before the first frame update
     void Start()
     {
-        //theRB.velocity = new Vector2(5, 2);
+        theRB = GetComponent<Rigidbody2D>();
+        theRB.velocity = new Vector2(5, 2);
     }
 
     // Update is called once per frame

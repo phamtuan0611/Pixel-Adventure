@@ -8,19 +8,23 @@ public class ShellController : MonoBehaviour
     [SerializeField] private float waitToDestroy;
 
     [SerializeField] private Animator anim;
-    [SerializeField] private Rigidbody2D theRB;
+    protected Rigidbody2D theRB;
     [SerializeField] private float hitSpeed;
 
     //public void OnEnable()
     //
-        //.SetParent(null);
-        //theRB = GetComponent<Rigidbody2D>();
+    //.SetParent(null);
+    //theRB = GetComponent<Rigidbody2D>();
     //}
-
+    void Awake()
+    {
+        theRB = GetComponent<Rigidbody2D>();
+    }
     // Start is called before the first frame update
     void Start()
     {
-        //.velocity = new Vector2(-5, 2);
+        //theRB = GetComponent<Rigidbody2D>();
+        theRB.velocity = new Vector2(-5, 2);
     }
 
     // Update is called once per frame
