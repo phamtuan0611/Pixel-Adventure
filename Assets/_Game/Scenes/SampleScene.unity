@@ -143,7 +143,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &114594325
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -224,13 +224,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 114594324}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.957, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 2078605269}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114594328
 MonoBehaviour:
@@ -2254,13 +2254,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1623500488}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 2078605269}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1623500494
 MonoBehaviour:
@@ -2351,13 +2351,14 @@ GameObject:
   - component: {fileID: 2078605270}
   - component: {fileID: 2078605273}
   - component: {fileID: 2078605272}
+  - component: {fileID: 2078605274}
   m_Layer: 0
   m_Name: Snail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &2078605267
 Animator:
   serializedVersion: 5
@@ -2445,6 +2446,8 @@ Transform:
   m_Children:
   - {fileID: 987929096}
   - {fileID: 1525395300}
+  - {fileID: 114594327}
+  - {fileID: 1623500493}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2523,6 +2526,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7371936, y: 0.14380693}
   m_EdgeRadius: 0
+--- !u!114 &2078605274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078605266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a45b2da6c44aa7d44852f658ba010d22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shellShall: {fileID: 114594324}
+  snailNShell: {fileID: 1623500488}
+  speed: 5
+  isTouch: 0
+  snail: {fileID: 2078605269}
+  launchForce: 5
+  arcHeight: 2
 --- !u!1001 &8538391744362193632
 PrefabInstance:
   m_ObjectHideFlags: 0
