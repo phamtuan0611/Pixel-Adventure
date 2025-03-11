@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -21,10 +22,43 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float knockbackLength, knockbackSpeed;
     private float knockbackCounter;
 
+    public Button left, right;
+    private bool moveLeft, moveRight;
+    private float horizontalMove;
+
     // Start is called before the first frame update
     void Start()
     {
         //anim = CharacterManager.instance.anim;
+        moveLeft = false;
+        moveRight = false;
+    }
+
+    public void PointerDownLeft()
+    {
+        moveLeft = true;
+        Debug.Log("Trai nhan");
+    }
+
+    public void PointerUpLeft()
+    {
+        moveLeft = false;
+        Debug.Log("Trai tha");
+
+    }
+
+    public void PointerDownRight()
+    {
+        moveRight = true;
+        Debug.Log("Phai nhan");
+
+    }
+
+    public void PointerUpRight()
+    {
+        moveRight = false;
+        Debug.Log("Phai tha");
+
     }
 
     // Update is called once per frame
@@ -41,7 +75,10 @@ public class PlayerController : MonoBehaviour
             if (knockbackCounter <= 0)
             {
                 //Move
-                theRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * activeSpeed, theRB.velocity.y);
+                //theRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * activeSpeed, theRB.velocity.y);
+
+                MovePlayer();
+
 
                 //Jump
                 if (Input.GetButtonDown("Jump"))
@@ -82,6 +119,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        theRB.velocity = new Vector2(horizontalMove, theRB.velocity.y);
+    }
+
     public void Jump()
     {
         theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
@@ -92,5 +134,38 @@ public class PlayerController : MonoBehaviour
         theRB.velocity = new Vector2(0f, jumpForce * 0.5f);
         anim.SetTrigger("isKnocking");
         knockbackCounter = knockbackLength;
+    }
+
+    private void MovePlayer()
+    {
+        if (moveLeft)
+        {
+            horizontalMove = -activeSpeed;
+        }
+        else if (moveRight)
+        {
+            horizontalMove = activeSpeed;
+        }
+        else
+        {
+            horizontalMove = 0f;
+        }
+    }
+
+    public void PlayerJump()
+    {
+        if (isGrounded == true)
+        {
+            Jump();
+            canDoubleJump = true;
+            anim.SetBool("isDoubleJumping", false);
+        }
+        else if (canDoubleJump == true)
+        {
+            Jump();
+            canDoubleJump = false;
+            //anim.SetBool("isDoubleJumping", true);
+            anim.SetTrigger("isDoubleJump");
+        }
     }
 }
