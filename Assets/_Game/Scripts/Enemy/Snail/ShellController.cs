@@ -18,7 +18,7 @@ public class ShellController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        theRB.velocity = new Vector2(5, 3);
+        theRB.velocity = new Vector2(4, 3);
     }
 
     // Update is called once per frame

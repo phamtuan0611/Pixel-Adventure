@@ -8,7 +8,7 @@ public class SnailNShell : ShellController
     void Start()
     {
         theRB = GetComponent<Rigidbody2D>();
-        theRB.velocity = new Vector2(-5, 3);
+        theRB.velocity = new Vector2(-4, 3);
     }
 
     // Update is called once per frame
