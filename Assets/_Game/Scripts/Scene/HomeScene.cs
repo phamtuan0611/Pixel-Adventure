@@ -5,12 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class HomeScene : MonoBehaviour
 {
-    [SerializeField] private string levelSelect;
+    [SerializeField] private string firstLevel;
+    [SerializeField] private GameObject btnContinue;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (PlayerPrefs.HasKey("currentLevel"))
+        {
+            btnContinue.SetActive(true);
+        }
+        else
+        {
+            btnContinue.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -21,12 +29,12 @@ public class HomeScene : MonoBehaviour
 
     public void Continue()
     {
-
+        SceneManager.LoadScene(PlayerPrefs.GetString("currentLevel"));
     }
 
     public void LevelSelect()
     {
-        SceneManager.LoadScene(levelSelect);
+        SceneManager.LoadScene(firstLevel);
     }
 
     public void QuitGame()

@@ -100,6 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPickup: 1
   fullHealth: 0
+  effectHeart: {fileID: 6950653262338585698, guid: 91906d9bfd44a6c40bc0757f71332ee9, type: 3}
 --- !u!58 &460064990874703876
 CircleCollider2D:
   m_ObjectHideFlags: 0

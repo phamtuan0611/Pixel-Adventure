@@ -6,6 +6,7 @@ public class HealthPickup : MonoBehaviour
 {
     [SerializeField] private int healthPickup;
     [SerializeField] private bool fullHealth;
+    [SerializeField] private GameObject effectHeart;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -21,6 +22,9 @@ public class HealthPickup : MonoBehaviour
                 {
                     PlayerHealthController.instance.AddHealth(healthPickup);
                 }
+
+                GameObject effect = Instantiate(effectHeart, transform.position, Quaternion.identity);
+                Destroy(effect, 1f);
 
                 Destroy(gameObject);
                 //AudioManager.instance.allSFXPlay(10);

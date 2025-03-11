@@ -32,6 +32,12 @@ public class EndLevel : MonoBehaviour
     IEnumerator Delay()
     {
         yield return new WaitForSeconds(2.5f);
+        
+        if (nextScene != "Victory")
+        {
+            PlayerPrefs.SetString("currentLevel", nextScene);
+        }
+
         SceneManager.LoadScene(nextScene);
     }
 }
