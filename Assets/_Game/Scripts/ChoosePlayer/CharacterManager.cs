@@ -7,6 +7,13 @@ using UnityEngine.SceneManagement;
 
 public class CharacterManager : MonoBehaviour
 {
+    public static CharacterManager instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     public CharacterDatabase characterDB;
 
     public Text nameText;

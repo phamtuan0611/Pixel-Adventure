@@ -19,6 +19,15 @@ public class HomeScene : MonoBehaviour
         {
             btnContinue.SetActive(false);
         }
+
+        if (PlayerPrefs.HasKey("selectedOption"))
+        {
+            Debug.Log("Yes");
+        }
+        else
+        {
+            Debug.Log("No");
+        }
     }
 
     // Update is called once per frame

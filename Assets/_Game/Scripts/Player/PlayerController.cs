@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        //anim = CharacterManager.instance.anim;
     }
 
     // Update is called once per frame

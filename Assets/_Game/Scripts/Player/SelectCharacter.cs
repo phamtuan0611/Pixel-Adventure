@@ -17,13 +17,17 @@ public class SelectCharacter : MonoBehaviour
         if (!PlayerPrefs.HasKey("selectedOption"))
         {
             selectedOption = 0;
+            Debug.Log("Khong co gi ca");
         }
         else
         {
+            Debug.Log("Cos");
             Load();
         }
 
         UpdateCharacter(selectedOption);
+
+        Debug.Log(PlayerPrefs.GetInt("selectedOption"));
     }
 
     // Update is called once per frame
