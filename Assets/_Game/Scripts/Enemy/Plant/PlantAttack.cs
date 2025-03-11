@@ -15,8 +15,6 @@ public class PlantAttack : MonoBehaviour
     private float playerIn, playerOut;
     [SerializeField] private float timePeriod;
 
-    //[SerializeField] private GameObject ball;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -38,10 +36,15 @@ public class PlantAttack : MonoBehaviour
             {
                 timer += Time.deltaTime;
 
-                if (timer > 0.5)
+                if (timer > 0.5f)
                 {
-                    anim.SetBool("isAttack", true);
-                    timer = 0;
+                    //anim.SetBool("isAttack", true);
+                    //timer = 0;
+                    //Shoot();
+                    Debug.Log(timer);
+                    Debug.Log("Shoot"); //?
+                    StartCoroutine(DelayTimeShoot());
+                    
                     Shoot();
                 }
 
@@ -75,15 +78,23 @@ public class PlantAttack : MonoBehaviour
         }
     }
 
+    IEnumerator DelayTimeShoot()
+    {
+        anim.SetBool("isAttack", true);
+        timer = 0;
+        yield return new WaitForSeconds(0.4f);
+        
+    }
+
     IEnumerator DelayTime()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.25f);
         playerIn = timePeriod;
     }
 
     void Shoot()
     {
-        GameObject spawnedBullet = Instantiate(bullet, bulletPos.position, Quaternion.identity);
+        GameObject spawnedBullet = Instantiate(bullet, new Vector3(bulletPos.position.x, bulletPos.position.y + 0.25f, bulletPos.position.z), Quaternion.identity);
         StartCoroutine(DestroyBullet(spawnedBullet));
     }
 
