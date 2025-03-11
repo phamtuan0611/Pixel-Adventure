@@ -44,6 +44,11 @@ public class HomeScene : MonoBehaviour
         Time.timeScale = 1.0f;
     }
 
+    public void MenuCharacter()
+    {
+        SceneManager.LoadScene("ChooseCharacter");
+        Time.timeScale = 1.0f;
+    }
     public void QuitGame()
     {
         Application.Quit();
