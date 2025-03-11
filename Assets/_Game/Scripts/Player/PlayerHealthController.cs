@@ -27,6 +27,8 @@ public class PlayerHealthController : MonoBehaviour
     {
         currentHealth = maxHealth;
 
+        UIController.instance.UpdateHealthDisplay(currentHealth, maxHealth);
+
         thePlayer = GetComponent<PlayerController>();
     }
 
@@ -65,6 +67,8 @@ public class PlayerHealthController : MonoBehaviour
 
                 thePlayer.isKnock();
             }
+
+            UIController.instance.UpdateHealthDisplay(currentHealth, maxHealth);
         }
 
     }
@@ -77,5 +81,7 @@ public class PlayerHealthController : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
+
+        UIController.instance.UpdateHealthDisplay(currentHealth, maxHealth);
     }
 }
