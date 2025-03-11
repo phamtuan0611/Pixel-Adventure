@@ -24,17 +24,24 @@ public class HomeScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+#if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            PlayerPrefs.DeleteAll();
+        }
+#endif
     }
 
     public void Continue()
     {
         SceneManager.LoadScene(PlayerPrefs.GetString("currentLevel"));
+        Time.timeScale = 1.0f;
     }
 
     public void LevelSelect()
     {
         SceneManager.LoadScene(firstLevel);
+        Time.timeScale = 1.0f;
     }
 
     public void QuitGame()
