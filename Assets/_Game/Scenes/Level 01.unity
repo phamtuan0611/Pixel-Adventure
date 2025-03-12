@@ -3642,14 +3642,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2212653886011751076, guid: 3c08884c12010b34cbae26021ed3f23d, type: 3}
-      propertyPath: m_Type
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2212653886011751076, guid: 3c08884c12010b34cbae26021ed3f23d, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: ffc80c129c9aca14c9fb4dbeba0e10d2, type: 3}
     - target: {fileID: 2687016786255699843, guid: 3c08884c12010b34cbae26021ed3f23d, type: 3}
       propertyPath: m_Camera
       value: 
@@ -4975,6 +4967,14 @@ PrefabInstance:
       propertyPath: m_text
       value: LEVEL  01
       objectReference: {fileID: 0}
+    - target: {fileID: 684334270752745619, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 170
+      objectReference: {fileID: 0}
+    - target: {fileID: 684334270752745619, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 3267294314170563236, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -4990,6 +4990,14 @@ PrefabInstance:
     - target: {fileID: 3267294314170563236, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PointerUpLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404231570728413996, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 170
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404231570728413996, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 3796680340281155448, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -5010,6 +5018,18 @@ PrefabInstance:
     - target: {fileID: 4869802068120991004, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
       propertyPath: m_Name
       value: StartScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859049812251856217, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 170
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859049812251856217, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 170
+      objectReference: {fileID: 0}
+    - target: {fileID: 8139188700233668940, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9183430465550415069, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

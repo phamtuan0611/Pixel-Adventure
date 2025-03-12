@@ -15,7 +15,7 @@ public class LevelSelect : MonoBehaviour
         SceneManager.LoadScene("HomeScene");
     }
 
-    public void ReadButtonText()
+    public void LoadLevel()
     {
         GameObject selectedButton = EventSystem.current.currentSelectedGameObject;
         Debug.Log("Damm");
@@ -29,10 +29,5 @@ public class LevelSelect : MonoBehaviour
                 Debug.Log("Level 0" + buttonText.text);
             }
         }
-    }
-
-    public void LoadLevel()
-    {
-
     }
 }

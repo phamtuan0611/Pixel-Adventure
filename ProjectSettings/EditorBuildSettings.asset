@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/_Game/Scenes/HomeScene.unity
     guid: 994b4d45e3b37fe4787c0b43ffcdf47a
   - enabled: 1
+    path: Assets/_Game/Scenes/SelectLevel.unity
+    guid: e5f20b76f607a8849803822b6fb9657e
+  - enabled: 1
     path: Assets/_Game/Scenes/ChooseCharacter.unity
     guid: 7084dbe2637b64449a30e5dfa4f9c345
   - enabled: 1
