@@ -4,45 +4,58 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    private Transform targetPosition; 
-    public float moveSpeed = 2f;
+    [SerializeField] private Transform target;
+    [SerializeField] private bool freezeVertical, freezeHorizontal;
+    private Vector3 positionStore;
 
-    private Camera mainCamera;
-    private bool isMoving = false;
-
-
+    [SerializeField] private bool clampPosition;
+    [SerializeField] private Transform clampMin, clampMax;
+    private float halfWidth, halfHeight;
+    [SerializeField] private Camera theCam;
+    // Start is called before the first frame update
     void Start()
     {
-        mainCamera = Camera.main;
+        positionStore = transform.position;
+        clampMin.SetParent(null); clampMax.SetParent(null); 
+
+        halfHeight = theCam.orthographicSize;
+        halfWidth = theCam.orthographicSize * theCam.aspect;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    // Update is called once per frame
+    void LateUpdate()
     {
-        if (other.CompareTag("Player") && !isMoving)
+        transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
+
+        if (freezeVertical == true)
         {
-            StartCoroutine(MoveCamera());
+            transform.position = new Vector3(target.position.x, positionStore.y, transform.position.z);
         }
+        if (freezeHorizontal == true)
+        {
+            transform.position = new Vector3(positionStore.x, target.position.y, transform.position.z);
+        }
+
+        if (clampPosition == true)
+        {
+            transform.position = new Vector3(
+                Mathf.Clamp(transform.position.x, clampMin.position.x + halfWidth, clampMax.position.x - halfWidth),
+                Mathf.Clamp(transform.position.y, clampMin.position.y + halfHeight, clampMax.position.y - halfHeight),
+                transform.position.z);
+        }
+
     }
 
-    IEnumerator MoveCamera()
+    private void OnDrawGizmos()
     {
-        isMoving = true;
-        Transform thePlayer = FindFirstObjectByType<PlayerController>().transform;
-
-        Vector3 startPosition = mainCamera.transform.position;
-        //Vector3 endPosition = new Vector3(targetPosition.position.x, targetPosition.position.y, mainCamera.transform.position.z);
-        Vector3 endPosition = new Vector3((startPosition.x + 32f) * thePlayer.localScale.x, startPosition.y, mainCamera.transform.position.z);
-
-
-        float elapsedTime = 0f;
-        while (elapsedTime < 1f)
+        if (clampPosition == true)
         {
-            mainCamera.transform.position = Vector3.Lerp(startPosition, endPosition, elapsedTime);
-            elapsedTime += Time.deltaTime * moveSpeed;
-            yield return null;
-        }
+            Gizmos.color = Color.green;
+            Gizmos.DrawLine(clampMin.position, new Vector3(clampMin.position.x, clampMax.position.y, 0f));
+            Gizmos.DrawLine(clampMin.position, new Vector3(clampMax.position.x, clampMin.position.y, 0f));
 
-        mainCamera.transform.position = endPosition;
-        isMoving = false;
+            Gizmos.DrawLine(clampMax.position, new Vector3(clampMin.position.x, clampMax.position.y, 0f));
+            Gizmos.DrawLine(clampMax.position, new Vector3(clampMax.position.x, clampMin.position.y, 0f));
+        }
     }
 }
