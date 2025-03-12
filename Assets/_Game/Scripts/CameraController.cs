@@ -10,6 +10,7 @@ public class CameraController : MonoBehaviour
     private Camera mainCamera;
     private bool isMoving = false;
 
+
     void Start()
     {
         mainCamera = Camera.main;
@@ -26,9 +27,11 @@ public class CameraController : MonoBehaviour
     IEnumerator MoveCamera()
     {
         isMoving = true;
+        Transform thePlayer = FindFirstObjectByType<PlayerController>().transform;
+
         Vector3 startPosition = mainCamera.transform.position;
         //Vector3 endPosition = new Vector3(targetPosition.position.x, targetPosition.position.y, mainCamera.transform.position.z);
-        Vector3 endPosition = new Vector3(startPosition.x + 32f, startPosition.y, mainCamera.transform.position.z);
+        Vector3 endPosition = new Vector3((startPosition.x + 32f) * thePlayer.localScale.x, startPosition.y, mainCamera.transform.position.z);
 
 
         float elapsedTime = 0f;

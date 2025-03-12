@@ -1576,6 +1576,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BtnMove
       objectReference: {fileID: 0}
+    - target: {fileID: 7892186227732041729, guid: 1dc9d74189c1274418a98f32a6e6c4f7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8017911875805196985, guid: 1dc9d74189c1274418a98f32a6e6c4f7, type: 3}
       propertyPath: m_Sprite
       value: 

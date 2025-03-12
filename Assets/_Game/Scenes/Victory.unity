@@ -576,7 +576,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Congratulations!!
+  m_text: Congratulations!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 23d8622bdc30c7744962a4e7ce3d373b, type: 2}
   m_sharedMaterial: {fileID: -5939236225160004523, guid: 23d8622bdc30c7744962a4e7ce3d373b, type: 2}
@@ -603,7 +603,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 182.6
+  m_fontSize: 195.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
             if (knockbackCounter <= 0)
             {
                 //Move
-                //theRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * activeSpeed, theRB.velocity.y);
+                theRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * activeSpeed, theRB.velocity.y);
 
                 MovePlayer();
 
@@ -97,15 +97,8 @@ public class PlayerController : MonoBehaviour
                     }
                 }
 
-                //ChangeDirection
-                if (theRB.velocity.x > 0)
-                {
-                    transform.localScale = Vector3.one;
-                }
-                if (theRB.velocity.x < 0)
-                {
-                    transform.localScale = new Vector3(-1f, 1f, 1f);
-                }
+                ChangeDirection();
+                
             }
             else
             {
@@ -121,7 +114,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        theRB.velocity = new Vector2(horizontalMove, theRB.velocity.y);
+        //theRB.velocity = new Vector2(horizontalMove, theRB.velocity.y);
     }
 
     public void Jump()
@@ -134,6 +127,18 @@ public class PlayerController : MonoBehaviour
         theRB.velocity = new Vector2(0f, jumpForce * 0.5f);
         anim.SetTrigger("isKnocking");
         knockbackCounter = knockbackLength;
+    }
+
+    private void ChangeDirection()
+    {
+        if (theRB.velocity.x > 0)
+        {
+            transform.localScale = Vector3.one;
+        }
+        if (theRB.velocity.x < 0)
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
     }
 
     private void MovePlayer()

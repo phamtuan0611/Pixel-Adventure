@@ -36,12 +36,12 @@ public class PlantAttack : MonoBehaviour
             {
                 timer += Time.deltaTime;
 
-                if (timer > 0.5f)
+                if (timer > 0.45f)
                 {
                     //anim.SetBool("isAttack", true);
                     //timer = 0;
                     //Shoot();
-                    Debug.Log(timer);
+                    //Debug.Log(timer);
                     Debug.Log("Shoot"); //?
                     StartCoroutine(DelayTimeShoot());
                     

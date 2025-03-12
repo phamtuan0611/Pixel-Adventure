@@ -22,7 +22,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4523027119544722032
 Transform:
   m_ObjectHideFlags: 0
@@ -135,6 +135,8 @@ MonoBehaviour:
   anim: {fileID: 0}
   knockbackLength: 0.5
   knockbackSpeed: 5
+  left: {fileID: 0}
+  right: {fileID: 0}
 --- !u!50 &10163794463165792
 Rigidbody2D:
   serializedVersion: 4

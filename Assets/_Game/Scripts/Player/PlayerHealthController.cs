@@ -58,6 +58,7 @@ public class PlayerHealthController : MonoBehaviour
             {
                 currentHealth = 0;
                 gameObject.SetActive(false);
+                Destroy(gameObject, 1f);
             }
             else
             {

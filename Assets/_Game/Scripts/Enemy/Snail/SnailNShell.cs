@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SnailNShell : ShellController
+public class SnailNShell : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        theRB = GetComponent<Rigidbody2D>();
-        theRB.velocity = new Vector2(-4, 3);
+        //theRB = GetComponent<Rigidbody2D>();
+        //theRB.velocity = new Vector2(-4, 3);
     }
 
     // Update is called once per frame
-    public override void Update()
+    void Update()
     {
-        base.Update();
+        //base.Update();
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -31,7 +31,7 @@ public class SnailNShell : ShellController
             Color theColor = GetComponent<SpriteRenderer>().color;
             theColor = Color.white;
 
-            isDefeated = true;
+            //isDefeated = true;
         }
     }
 }

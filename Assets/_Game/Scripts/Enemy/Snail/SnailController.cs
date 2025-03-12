@@ -17,10 +17,12 @@ public class SnailController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             shellShall.SetActive(true);
+            
+
             shellShall.transform.SetParent(null);
 
-            snailNShell.SetActive(true);
-            snailNShell.transform.SetParent(null);
+            //snailNShell.SetActive(true);
+            //snailNShell.transform.SetParent(null);
         }
     }
 }
