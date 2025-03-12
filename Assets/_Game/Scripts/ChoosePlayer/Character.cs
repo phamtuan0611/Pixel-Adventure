@@ -8,4 +8,6 @@ public class Character
     public string characterName;
     public Sprite characterSprite;
     public Animator characterAnimator;
+
+    //public RuntimeAnimatorController characterAnimator;
 }
