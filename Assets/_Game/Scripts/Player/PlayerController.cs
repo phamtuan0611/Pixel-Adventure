@@ -120,6 +120,7 @@ public class PlayerController : MonoBehaviour
     public void Jump()
     {
         theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
+        AudioManager.instance.allSFXPlay(14);
     }
 
     public void isKnock()

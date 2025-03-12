@@ -31,6 +31,7 @@ public class EnemyController : EnemyMoving
                 Destroy(gameObject);
                 //Destroy(patrolPoints[0].gameObject);
                 //Destroy(patrolPoints[1].gameObject);
+                AudioManager.instance.allSFXPlay(5);
             }
         }
     }
@@ -55,6 +56,7 @@ public class EnemyController : EnemyMoving
             anim.SetTrigger("isHitting");
 
             isDefeated = true;
+            AudioManager.instance.allSFXPlay(6);
         }
     }
 }

@@ -67,6 +67,7 @@ public class PlayerHealthController : MonoBehaviour
                 thePlayer.GetComponent<Animator>().SetTrigger("isKnocking");
 
                 thePlayer.isKnock();
+                AudioManager.instance.allSFXPlay(13);
             }
 
             UIController.instance.UpdateHealthDisplay(currentHealth, maxHealth);

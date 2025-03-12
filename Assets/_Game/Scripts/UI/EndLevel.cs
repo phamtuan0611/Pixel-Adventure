@@ -13,6 +13,7 @@ public class EndLevel : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             anim.SetBool("flagActive", true);
+            AudioManager.instance.completeLevelMusicPlay();
             StartCoroutine(Delay());
         }
     }

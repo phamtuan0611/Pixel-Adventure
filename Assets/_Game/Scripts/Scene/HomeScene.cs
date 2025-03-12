@@ -11,6 +11,7 @@ public class HomeScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        AudioManager.instance.menuMusicPlay();
         if (PlayerPrefs.HasKey("currentLevel"))
         {
             btnContinue.SetActive(true);
