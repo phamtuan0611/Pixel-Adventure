@@ -4963,18 +4963,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 621860914238128967, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
-      propertyPath: m_text
-      value: LEVEL  01
-      objectReference: {fileID: 0}
-    - target: {fileID: 684334270752745619, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 170
-      objectReference: {fileID: 0}
-    - target: {fileID: 684334270752745619, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 170
-      objectReference: {fileID: 0}
     - target: {fileID: 3267294314170563236, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -4983,22 +4971,6 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1137394797}
-    - target: {fileID: 3267294314170563236, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PointerDownLeft
-      objectReference: {fileID: 0}
-    - target: {fileID: 3267294314170563236, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PointerUpLeft
-      objectReference: {fileID: 0}
-    - target: {fileID: 3404231570728413996, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 170
-      objectReference: {fileID: 0}
-    - target: {fileID: 3404231570728413996, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 170
-      objectReference: {fileID: 0}
     - target: {fileID: 3796680340281155448, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -5007,38 +4979,14 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1137394797}
-    - target: {fileID: 3796680340281155448, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PointerDownRight
-      objectReference: {fileID: 0}
-    - target: {fileID: 3796680340281155448, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PointerUpRight
-      objectReference: {fileID: 0}
     - target: {fileID: 4869802068120991004, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
       propertyPath: m_Name
       value: StartScreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 6859049812251856217, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 170
-      objectReference: {fileID: 0}
-    - target: {fileID: 6859049812251856217, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 170
-      objectReference: {fileID: 0}
-    - target: {fileID: 8139188700233668940, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9183430465550415069, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1137394797}
-    - target: {fileID: 9183430465550415069, guid: b92e5f3d87b80064bbc9dea64cf294aa, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayerJump
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
