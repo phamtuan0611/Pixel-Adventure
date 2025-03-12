@@ -62,4 +62,10 @@ public class HomeScene : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void SelectScene()
+    {
+        SceneManager.LoadScene("SelectLevel");
+        Time.timeScale = 1.0f;
+    }
 }
