@@ -21,7 +21,7 @@ public class ShellController : EnemyMoving
     public override void Start()
     {
         base.Start();
-        theRB.velocity = new Vector2(3, 3);
+        theRB.velocity = new Vector2(1, 0);
     }
 
     // Update is called once per frame
@@ -45,8 +45,8 @@ public class ShellController : EnemyMoving
             if (waitToDestroy <= 0)
             {
                 Destroy(gameObject);
-                Destroy(patrolPoints[0].gameObject);
-                Destroy(patrolPoints[1].gameObject);
+                //Destroy(patrolPoints[0].gameObject);
+                //(patrolPoints[1].gameObject);
             }
         }
     }

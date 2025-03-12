@@ -21,16 +21,16 @@ public class EnemyController : EnemyMoving
         {
             waitToDestroy -= Time.deltaTime;
 
-            foreach (Transform t in patrolPoints)
-            {
-                t.SetParent(transform);
-            }
+            //foreach (Transform t in patrolPoints)
+            //{
+            //    t.SetParent(transform);
+            //}
 
             if (waitToDestroy <= 0)
             {
                 Destroy(gameObject);
-                Destroy(patrolPoints[0].gameObject);
-                Destroy(patrolPoints[1].gameObject);
+                //Destroy(patrolPoints[0].gameObject);
+                //Destroy(patrolPoints[1].gameObject);
             }
         }
     }
