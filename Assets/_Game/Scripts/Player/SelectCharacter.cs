@@ -45,6 +45,8 @@ public class SelectCharacter : MonoBehaviour
 
     private void Load()
     {
+    
         selectedOption = PlayerPrefs.GetInt("selectedOption");
+        Debug.Log("InGame Selected OP " + selectedOption);
     }
 }

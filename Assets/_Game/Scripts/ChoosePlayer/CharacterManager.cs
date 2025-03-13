@@ -86,6 +86,7 @@ public class CharacterManager : MonoBehaviour
 
     private void Save()
     {
+        Debug.Log("Selected Op " + selectedOption);
         PlayerPrefs.SetInt("selectedOption", selectedOption);
     }
 

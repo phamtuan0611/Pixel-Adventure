@@ -25,8 +25,8 @@ public class LevelSelect : MonoBehaviour
             Text buttonText = selectedButton.GetComponentInChildren<Text>();
             if (buttonText != null)
             {
-                SceneManager.LoadScene("Level 0" + buttonText.text);
-                Debug.Log("Level 0" + buttonText.text);
+                SceneManager.LoadScene("Level " + buttonText.text);
+                Debug.Log("Level " + buttonText.text);
             }
         }
     }

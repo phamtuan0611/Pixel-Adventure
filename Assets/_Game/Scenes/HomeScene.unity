@@ -456,7 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16090acf3dec6c042b6b52b20d4bb779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLevel: Level 01
+  firstLevel: Level 1
   btnContinue: {fileID: 587134036}
 --- !u!114 &766064198
 MonoBehaviour:

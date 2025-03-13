@@ -34,8 +34,9 @@ public class PlayerController : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
+        yield return null;
         //anim = CharacterManager.instance.anim;
         moveLeft = false;
         moveRight = false;
