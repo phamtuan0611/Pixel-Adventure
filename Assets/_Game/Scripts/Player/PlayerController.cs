@@ -26,12 +26,21 @@ public class PlayerController : MonoBehaviour
     private bool moveLeft, moveRight;
     private float horizontalMove;
 
+    private SelectCharacter theSC;
+
+    private void Awake()
+    {
+        theSC = GetComponent<SelectCharacter>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         //anim = CharacterManager.instance.anim;
         moveLeft = false;
         moveRight = false;
+
+        anim.runtimeAnimatorController = theSC.anim.runtimeAnimatorController;
     }
 
     public void PointerDownLeft()
